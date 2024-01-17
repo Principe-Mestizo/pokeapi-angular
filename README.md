@@ -1,5 +1,5 @@
 
-# Weather
+# Pokeapi angular
 Es un aplicacion simple con angular que busca un pokemon por su nombre y tipos
 
 
