@@ -1,0 +1,45 @@
+<!-- <app-searchbox
+    placeholder="Busca tu tipo de pokemon? "
+    (onValue)="searchByTypePokemon($event)"
+
+>
+
+</app-searchbox> -->
+
+<div class="container">
+    <button *ngFor="let pokemon of tipoPokemon" class="button__pokemon"
+        [ngClass]="{'btn-outline-primary': selectedPokemon === pokemon}" (click)="searchByTypePokemon(pokemon)">
+
+        {{ pokemon | uppercase }}
+    </button>
+</div>
+
+<div *ngIf="pokemons.length === 0 ; else table" class="alert container">
+    <p class="alert__text"> {{ mensaje }} </p>
+  </div>
+
+<app-loading-pokemon *ngIf="isLoading">
+
+</app-loading-pokemon>
+
+
+<ng-template #table>
+
+    
+<div class="pokemon__data" *ngFor="let pokemon of pokemons">
+
+
+    
+    <ng-container *ngFor="let speciesPokemon of pokemon.pokemon" >
+
+        <div class="pokemon__card">
+          <p class="pokemon__title">  Nombre: {{ speciesPokemon.pokemon.name | titlecase }}</p>
+            <img class="img__pokemon" [src]="getIcon(speciesPokemon.pokemon.url)" alt="{{ speciesPokemon.pokemon.name }}">
+        </div>
+
+    </ng-container>
+
+
+
+</div>
+</ng-template>

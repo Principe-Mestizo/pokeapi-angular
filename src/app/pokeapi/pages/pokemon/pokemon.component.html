@@ -1,0 +1,16 @@
+
+
+<div class="container">
+
+    
+  <app-card-pokemon
+    [pokemons]="pokemon"
+  >
+
+  </app-card-pokemon>
+
+   <div *ngFor="let pk of pokemon">
+      <li> {{ pk.name }} </li>
+      <li> {{  pk.species.name }} </li>
+    </div> 
+</div>

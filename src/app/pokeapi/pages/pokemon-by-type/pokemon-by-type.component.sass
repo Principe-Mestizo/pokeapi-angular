@@ -1,0 +1,71 @@
+$border-color: #4CAF50
+$color-button: #196b1b
+$color-button-hover: #0a2c0b
+$color-text: #ffffff
+$color-primary: #3F51B5
+.container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 20px
+    width: 800px
+    margin-bottom: 20px
+
+.button__pokemon
+    padding: 10px
+    border-radius: 10px
+    margin: 5px
+    width: 100px
+    background-color: $color-button
+    color: $color-text
+    font-weight: bold
+
+    &:hover
+        background-color: $color-button-hover
+
+.pokemon__data
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 20px
+    width: 800px
+
+.pokemon__card
+    background-color: #fff
+    border: 1px solid #ddd
+    border-radius: 8px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    transition: box-shadow 0.3s
+    width: calc(33.33% - 20px)
+    margin-bottom: 20px
+    display: flex
+    flex-direction: column
+    cursor: pointer
+
+    &:hover
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+
+    .pokemon__title
+        text-align: center
+        padding: 5px
+
+    img
+        width: 100%
+        border-radius: 8px
+        display: block
+        margin: 0 auto
+
+    ul
+        list-style: none
+        padding: 0
+        text-align: center
+
+    li
+        margin: 8px 0
+
+
+
+.alert__text
+    color: $color-primary
+    font-size: 1.5rem
+    margin: 20px 0px

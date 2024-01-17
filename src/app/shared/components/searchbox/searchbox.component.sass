@@ -1,0 +1,36 @@
+$border-color: #4CAF50
+$color-hover: #1a4d1c
+
+.input__pokemon
+    display: flex
+    width: 100%
+    justify-content: center
+    margin: 0 auto
+    padding: 20px
+    gap: 20px
+    color: green
+    align-items: center
+    font-size: 24px
+    box-shadow: 1px 1px 0px 2px rgba(244,244 ,244, 0.5 )
+
+.input__pokemon input
+    border: 1px solid $border-color
+    padding: 10px
+    border-radius: 10px
+    &:focus
+        outline: none
+
+.button__pokemon
+    padding: 10px
+    width: 160px
+    border: 1px solid $border-color
+    color: white
+    font: bold
+    font-size: 14px
+    border-radius: 8px
+    background-color: green
+    cursor: pointer
+    text-transform: uppercase
+    font-weight: 700
+    &:hover
+        background-color: $color-hover

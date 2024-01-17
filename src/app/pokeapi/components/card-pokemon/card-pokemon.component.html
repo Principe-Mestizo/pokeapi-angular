@@ -1,0 +1,37 @@
+
+<div  *ngIf="pokemons.length === 0; else table" class="alert container" table>
+    <p class="alert__text">No hay pokemones</p>
+</div>
+
+<ng-template #table>
+    <div class="container">
+        <div class="pokemon"  *ngFor="let pokemon of pokemons" [style.backgroundColor]="getTypeColor(pokemon)" >
+        
+            <li class="pokemon__name">{{ pokemon.name | uppercase }}</li>
+             <img class="pokemon__imagen" [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
+             <button class="pokemon__button" [routerLink]="['/pokemon', pokemon.id]">informacion..</button>
+        
+        </div>
+
+      
+    </div>
+    
+    <div class="pokemon__paginacion container">
+    
+        <button
+             class="pokemon__prev dark:bg-slate-900"
+             (click)="prevPage()"
+        >
+            Retroceder
+        </button>
+    
+        <button
+        class="pokemon__sigt"
+        (click)="nextPage()"
+        >
+            Siguiente
+        </button>
+       
+    
+    </div>
+</ng-template> 
