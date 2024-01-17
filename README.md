@@ -5,7 +5,7 @@ Es un aplicacion simple con angular que busca un pokemon por su nombre y tipos
 
 ## Demo
 
-https://principe-mestizo.github.io/pokeapi-angular/pokemon
+https://principe-mestizo.github.io/pokeapi-angular/
 
 
 ## Documentation
